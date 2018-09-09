@@ -22,7 +22,7 @@
           {{ .Content }}
           <ul class="list-inline list-social-icons mb-0">
             {{ range .Site.Params.handles }}
-                <li class="list-inline-item">
+                <li class="list-inline-item {{ .icon }}">
                   <a href="{{ .link }}" data-toggle="tooltip" title="{{ .name }}" data-offset="0 10">
                     <span class="fa-stack fa-lg">
                       <i class="fa fa-circle fa-stack-2x"></i>
