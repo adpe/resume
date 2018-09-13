@@ -143,6 +143,15 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
+@media (max-width: 992px) {
+  section.resume-section-sm {
+    text-align: center;
+  }
+  section.resume-section-sm .img-profile {
+    max-width: 75% !important;
+  }
+}
+
 @media (max-width: 576px) {
     section.resume-section-sm {
       text-align: center;
