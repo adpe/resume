@@ -55,6 +55,14 @@ h2 {
   color: #f48024;
 }
 
+.list-social-icons .xing a:hover {
+  color: #007575;
+}
+
+.list-social-icons .telegram a:hover {
+  color: #32afed;
+}
+
 .list-social-icons a .fa-lg {
   font-size: 1.75rem;
 }
@@ -73,7 +81,7 @@ h2 {
   transition: transform 0.5s;
 }
 
-#sideNav .navbar-nav .nav-item .nav-link:hover {
+#sideNav .navbar-nav .nav-item .nav-link:not(.active):hover {
   transform: scale(1.5);
 }
 
@@ -124,7 +132,7 @@ section.resume-section {
 }
 
 section.resume-section .resume-item .resume-date {
-  min-width: none;
+  min-width: unset;
 }
 
 @media (min-width: 768px) {

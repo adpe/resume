@@ -1,7 +1,10 @@
 {{ define "main" }}
-   {{ partial "about.html" .}}
+   {{ partial "about" .}}
    {{ if .Site.Params.showSkills }}
-       {{ partial "portfolio/skills.html" . }}
+      {{ with .Site.GetPage "section" "skills" }}
+         {{ .Scratch.Add "sectionId" "skills" }}
+         {{ partial "portfolio/skills" . }}
+      {{ end }}
    {{ end }}
    {{ if .Site.Params.showProjects }}
       {{ with .Site.GetPage "section" "projects/creations" }}

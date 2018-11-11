@@ -1,23 +1,36 @@
 <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
   <div class="my-auto" id="skills-content">
     <h2 class="mb-5">Skills</h2>
-    {{ range $.Site.Data.skills }}
-        <div class="subheading mb-3 skills-heading">{{ .grouping }}</div>
-            <ul>
+    {{ .Content }}
+      <div class="row">
+        {{ range $.Site.Data.skills }}
+          <div class="col-xl-3 col-md-6">
+            <h3 class="mb-3 subheading skills-heading">{{ .grouping }}</h3>
+            <ul class="list-group" id="skills-list-{{ .id }}">
             {{ range .skills }}
-                {{ if isset . "name" }}
-                    <li class="list-inline-item">
-                      <i class="devicons devicons-{{ cond (in $.Site.Data.devicons (lower .name)) (lower .name) "terminal_badge" }}"></i>
-                      <a href="{{.link}}">{{ .name }}</a>
-                    </li>
-                {{ else }}
+              <div class="skillbar" data-percent='{{ if isset . "level" }}{{ .level }}{{ else }}0%{{ end }}'>
+                <div class="skillbar-title">
                   <li class="list-inline-item">
+                  {{ if isset . "name" }}
+                    <i class="devicons devicons-{{ cond (in $.Site.Data.devicons (lower .name)) (lower .name) "terminal_badge" }}"></i>
+                    {{ if isset . "link" }}
+                      <a href="{{ .link }}">{{ .name }}</a>
+                    {{ else }}
+                      {{ .name }}
+                    {{ end }}
+                  {{ else }}
                     <i class="devicons devicons-{{ cond (in $.Site.Data.devicons (lower .)) (lower .) "terminal_badge" }}"></i>
                     {{ . }}
+                  {{ end }}
                   </li>
-                {{ end }}
+                </div>
+                <div class="skillbar-percent">{{ if isset . "level" }}{{ .level }}{{ else }}n/a{{ end }}</div>
+                <div class="skillbar-bar"></div>
+              </div>
             {{ end }}
             </ul>
-    {{ end }}
+        </div>
+        {{ end }}
+      </div>
   </div>
 </section>
