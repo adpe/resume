@@ -6,6 +6,7 @@
     {{ .Content }}
     {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
     {{ partial "techtags" . }}
+    <a href="/projects/contributions/"><button type="button" class="btn btn-outline-secondary btn-sm mt-3"><i class="fa fa-long-arrow-left mr-2" aria-hidden="true"></i>back</button></a>
   </div>
 </section>
 {{ end }}
