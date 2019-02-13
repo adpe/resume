@@ -2,14 +2,14 @@
 <h3 class="mb-3">{{ .Title }}</h3>
 <div class="resume-item d-flex flex-column flex-md-row mb-3">
 
-  <div class="resume-content " style="width:200px;!important;">
+  <div class="resume-content">
     {{with  .Params.image }}
       <img src="{{ . }}" style="max-height:150px;max-width:150px;"/>
     {{ end }}
   </div>
   <div class="resume-date ml-3">
     <p>{{ .Description | safeHTML }}<p>
-    <p class><a href="{{.Permalink}}">Read more..</a></p>
+    <p class><a href="{{.Permalink}}"><button type="button" class="btn btn-outline-secondary btn-sm">Read more<i class="fa fa-long-arrow-right ml-2" aria-hidden="true"></i></button></a></p>
   </div>
 </div>
 <div>{{ partial "techtags" . }}</div>
