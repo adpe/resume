@@ -188,3 +188,7 @@ a:hover, a:focus, a:active {
 img {
   max-width:80%;
 }
+
+.resume-content img {
+  max-width: 350px !important;
+}
