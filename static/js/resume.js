@@ -52,6 +52,9 @@
   });
 
   $(window).on('load scroll', function() {
+    if (window.sections === undefined || window.sections.length == 0) {
+        window.sections = [];
+    }
     var windowHeight = $(window).height(),
         windowScrollPos = $(this).scrollTop();
         windowScrollPos = windowScrollPos+500;

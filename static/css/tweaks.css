@@ -202,3 +202,23 @@ code {
   padding: 5px 10px;
   border-radius: 15px;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  #sideNav .navbar-nav .nav-item .nav-link:not(.active):hover {
+    transform: unset !important;
+  }
+  section.resume-section-sm .img-profile {
+    max-width: 60% !important;
+  }
+  section.resume-section .resume-item .resume-content img {
+    max-height: 100% !important;
+    max-width: 100% !important;
+  }
+  section.resume-section .resume-item .resume-date {
+    margin-top: 1rem;
+    margin-left: 0 !important;
+  }
+}
