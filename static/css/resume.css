@@ -63,6 +63,10 @@ h2 {
   color: #32afed;
 }
 
+.list-social-icons .icomoon-polarsteps a:hover {
+  color: #d2264c;
+}
+
 .list-social-icons a .fa-lg {
   font-size: 1.75rem;
 }
