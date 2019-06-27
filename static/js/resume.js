@@ -97,4 +97,19 @@
     $(".arrow").css("opacity", 1 - $(window).scrollTop() / 875);
   });
 
+  // Back to top functionality.
+  $('.container-fluid').append('<i class="fa fa-chevron-up" id="back-to-top"></i>');
+
+  $(window).scroll(function() {
+      if ($(document).scrollTop() > 220) {
+          $('#back-to-top').fadeIn(300);
+      } else {
+          $('#back-to-top').fadeOut(100);
+      }
+  });
+
+  $('#back-to-top').click(function(event) {
+      $('html, body').animate({scrollTop: 0}, 500);
+  });
+
 })(jQuery); // End of use strict

@@ -75,6 +75,12 @@ h2 {
   font-size: 3rem;
 }
 
+@media (min-width: 992px) {
+    .list-icons {
+      margin-left: -19px;
+    }
+}
+
 .list-icons .list-inline-item i:hover {
   color: #bf2e29;
 }
@@ -143,6 +149,9 @@ section.resume-section .resume-item .resume-date {
   section.resume-section {
     min-height: 100vh;
   }
+  section.resume-section .col-md-2 {
+      margin-right: -11rem;
+  }
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
   }
@@ -167,9 +176,13 @@ section.resume-section .resume-item .resume-date {
 @media (max-width: 576px) {
     section.resume-section-sm {
       text-align: center;
+      padding-top: 2rem !important;
     }
     h1 {
         font-size: 4rem !important;
+    }
+    .my-auto .subheading {
+        margin-bottom: 1rem !important;
     }
 }
 
@@ -195,4 +208,22 @@ img {
 
 .resume-content img {
   max-width: 350px !important;
+}
+
+/* Back to top button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    padding: 1rem;
+    bottom: 2.5em;
+    right: 2.5em;
+    line-height: 1rem;
+    color: #585858;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+#back-to-top:hover {
+	color: #bf2e29;
+	box-shadow: 0 0 3px 1px #bf2e29;
 }
