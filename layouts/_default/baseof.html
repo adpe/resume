@@ -17,6 +17,7 @@
   <link href="{{ "css/simple-line-icons.min.css" | absURL }}" rel="stylesheet">
   <link href="{{ "css/resume.min.css" | absURL }}" rel="stylesheet">
   <link href="{{ "css/tweaks.min.css" | absURL }}" rel="stylesheet">
+  <link href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" rel="stylesheet">
   {{ .Hugo.Generator }}
   {{ block "headfiles" . }}
 
@@ -44,6 +45,10 @@
     gtag('js', new Date());
 
     gtag('config', '{{ .Site.Params.google.analytics.trackerID }}');
+  </script>
+  <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+  <script>
+      GitHubCalendar(".calendar", "adpe", { responsive: true });
   </script>
 </body>
 </html>
