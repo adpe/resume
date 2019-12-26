@@ -20,12 +20,12 @@
   </div>
   <div>
     {{ .Content }}
-    <div class="row list-icons list-social-icons">
+    <div class="row col-xl-6 px-lg-0 list-icons list-social-icons">
     <!-- <ul class="list-inline list list-social-icons mb-0"> -->
       {{ range .Site.Params.handles }}
       <div class="col-4 col-md-2 {{ .icon }}">
           <!-- <li class="list-inline-item {{ .icon }}"> -->
-            <a href="{{ .link }}" target="_blank" data-toggle="tooltip" title="{{ .name }}" data-offset="0 10">
+            <a href="{{ .link }}" target="_blank" data-toggle="tooltip" title="{{ .name }}"  data-offset="0 0">
               <span class="fa-stack fa-lg">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa {{ if .icon}}fa-{{ .icon }}{{ else }}fa-{{ lower .name }}{{ end }} fa-stack-1x fa-inverse"></i>

@@ -69,6 +69,7 @@ h2 {
 
 .list-social-icons a .fa-lg {
   font-size: 1.75rem;
+  margin-top: -1.875rem;
 }
 
 .list-icons {
@@ -148,9 +149,6 @@ section.resume-section .resume-item .resume-date {
 @media (min-width: 768px) {
   section.resume-section {
     min-height: 100vh;
-  }
-  section.resume-section .col-md-2 {
-      margin-right: -11rem;
   }
   section.resume-section .resume-item .resume-date {
     min-width: 18rem;
