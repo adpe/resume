@@ -182,12 +182,6 @@ section.resume-section .resume-item .resume-date {
     .my-auto .subheading {
         margin-bottom: 1rem !important;
     }
-    .bounce-arrow {
-        top: 65px !important;
-        right: 23px !important;
-        width: unset !important;
-        left: unset !important;
-    }
 }
 
 .bg-primary {

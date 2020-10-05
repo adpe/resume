@@ -12,15 +12,12 @@
                 <div class="skillbar-title">
                   <li class="list-inline-item">
                   {{ if isset . "name" }}
-                    <i class="devicons devicons-{{ cond (in $.Site.Data.devicons (lower .name)) (lower .name) "terminal_badge" }}"></i>
-                    {{ if isset . "link" }}
-                      <a href="{{ .link }}">{{ .name }}</a>
+                    {{ if isset . "old" }}
+                      <i class="devicons devicons-{{ cond (in $.Site.Data.devicons (lower .name)) (lower .name) "terminal_badge" }}"></i>
                     {{ else }}
-                      {{ .name }}
+                      <i class="devicon-{{ lower .name }}-plain colored"></i>
                     {{ end }}
-                  {{ else }}
-                    <i class="devicons devicons-{{ cond (in $.Site.Data.devicons (lower .)) (lower .) "terminal_badge" }}"></i>
-                    {{ . }}
+                    {{ .name }}
                   {{ end }}
                   </li>
                 </div>
