@@ -4,8 +4,16 @@
   <div class="my-auto">
     <h2 class="mb-0"><span class="text-primary">{{ .Title }}</span></h2>
     {{ .Content }}
-    {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
     {{ partial "techtags" . }}
+    {{ with .Params.link }}<p>Project link: <a href="{{ . }}">{{ . }}</a></p>{{ end }}
+    <script src="https://utteranc.es/client.js"
+            repo="adpe/portfolio"
+            issue-term="pathname"
+            label="blog"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
     <a href="/projects/contributions/"><button type="button" class="btn btn-outline-secondary btn-sm mt-3"><i class="fa fa-long-arrow-left mr-2" aria-hidden="true"></i>back</button></a>
   </div>
 </section>
