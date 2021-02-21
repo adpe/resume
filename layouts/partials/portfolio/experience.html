@@ -6,10 +6,12 @@
           <div class="resume-content mr-auto">
             <h3 class="mb-0">{{ .role }}</h3>
             <div class="subheading mb-3">{{ .company }}</div>
+            <p>{{ .major }}</p>
+            <p>{{ .minor }}</p>
             <p>{{ .summarystart }}</p>
                 <ul>
                 {{ range .summarylist }} 
-                  <li><a href="{{ .url }}" target="_blank">{{ .name }}</a></li>
+                  <li>{{ . }}</li>
                 {{ end }}
                 </ul>
             <p>{{ .summaryend }}</p>
