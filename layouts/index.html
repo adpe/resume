@@ -8,7 +8,7 @@
    {{ end }}
    {{ if .Site.Params.showProjects }}
       {{ with .Site.GetPage "section" "projects/creations" }}
-         {{ .Scratch.Add "sectionId" "projects" }}
+         {{ .Scratch.Add "sectionId" "creations" }}
          {{ partial "sectionSummary" . }}
       {{ end }}
    {{ end }}
