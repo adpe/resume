@@ -2,9 +2,9 @@
 <h3 class="mb-3">{{ .Title }}</h3>
 <div class="resume-item d-flex flex-column flex-md-row mb-3">
 
-  <div class="resume-content">
+  <div class="resume-content img">
     {{with  .Params.image }}
-      <img src="{{ . }}"/>
+    <a href="{{ . }}" target="_blank"><img src="{{ . }}"/></a>
     {{ end }}
   </div>
   <div class="resume-date ml-3">
