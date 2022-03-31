@@ -63,6 +63,10 @@ h2 {
     color: #32afed;
 }
 
+.list-social-icons .signalapp a:hover {
+    color: #3872e8;
+}
+
 .list-social-icons .icomoon-polarsteps a:hover {
     color: #d2264c;
 }
