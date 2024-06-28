@@ -109,9 +109,6 @@ All personal information outside the above details is captured by params in [`co
     link = "https://keybase.io/edwardawebb"
     icon = "key" #optional icon attribute used for Font Awesome icons, otherwise the name is lowercased.
 
-[params.google.analytics]
-    trackerID = "XX-123446-01"
-
 [outputs] #only required for search
     home = ["HTML", "JSON"]
 ```
