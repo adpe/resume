@@ -10,14 +10,8 @@
   <meta property="og:description" content="{{ .Site.Params.description }}" />
   <meta name="author" content="{{ .Site.Params.firstName }} {{ .Site.Params.lastName }}">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|Saira+Extra+Condensed" rel="stylesheet">
-  <link href="{{ "css/bootstrap.min.css" | absURL }}" rel="stylesheet" rel="stylesheet">
-  <link href="{{ "css/fork-awesome.min.css" | absURL }}" rel="stylesheet">
-  <link href="{{ "css/icomoon.min.css" | absURL }}" rel="stylesheet">
-  <link href="{{ "css/devicons.min.css" | absURL }}" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@master/devicon.min.css">
-  <link href="{{ "css/simple-line-icons.min.css" | absURL }}" rel="stylesheet">
-  <link href="{{ "css/resume.min.css" | absURL }}" rel="stylesheet">
-  <link href="{{ "css/tweaks.min.css" | absURL }}" rel="stylesheet">
+  <link href="{{ "css/all.min.css" | absURL }}" rel="stylesheet">
   {{ hugo.Generator }}
   {{ block "headfiles" . }}
 
@@ -47,11 +41,8 @@
     {{ end }}
   </div>
   {{ block "footerfiles" . }}
-
+  {{ partial "back-to-top.html" . }}
   {{ end }}
-  <script src="{{ "js/jquery.min.js" | absURL }}"></script>
-  <script src="{{ "js/bootstrap.bundle.min.js" | absURL }}"></script>
-  <script src="{{ "js/jquery.easing.min.js" | absURL }}"></script>
-  <script src="{{ "js/resume.js" | absURL }}"></script>
+  <script src="{{ "js/all.min.js" | absURL }}"></script>
 </body>
 </html>

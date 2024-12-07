@@ -47,18 +47,18 @@
   });
 
   // Back to top functionality.
-  $('.container-fluid').append('<i class="fa fa-chevron-up" id="back-to-top"></i>');
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollTopButton = document.getElementById("back-to-top");
 
-  $(window).scroll(function() {
-      if ($(document).scrollTop() > 220) {
-          $('#back-to-top').fadeIn(300);
+    window.onscroll = function () {
+      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        scrollTopButton.style.visibility = "visible";
+        scrollTopButton.style.opacity = "1";
       } else {
-          $('#back-to-top').fadeOut(100);
+        scrollTopButton.style.visibility = "hidden";
+        scrollTopButton.style.opacity = "0";
       }
-  });
-
-  $('#back-to-top').click(function(event) {
-      $('html, body').animate({scrollTop: 0}, 500);
+    };
   });
 
 })(jQuery); // End of use strict

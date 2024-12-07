@@ -47,7 +47,7 @@ div.skills-heading{
 .skillbar-bar {
   height: 3px;
   width: 0px;
-  background: #24292e;
+  background: var(--primary-color);
 }
 
 .skillbar-title {
@@ -111,13 +111,13 @@ div.skills-heading{
 }
 
 .tag:hover {
-  background-color: #bf2e29;
+  background-color: var(--secondary-color);
   text-decoration: none;
   color: white;
 }
 
 .tag:hover::after {
-   border-left-color: #bf2e29;
+   border-left-color: var(--secondary-color);
 }
 
 .tag:hover::before {
@@ -131,7 +131,7 @@ div.skills-heading{
 
 code {
   background: #ededed;
-  color: #bf2e29;
+  color: var(--secondary-color);
   margin: 0 5px;
   padding: 5px 10px;
   border-radius: 15px;
