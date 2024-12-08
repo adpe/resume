@@ -1,15 +1,31 @@
-
 <h3 class="mb-3">{{ .Title }}</h3>
 <div class="resume-item d-flex flex-column flex-md-row mb-3">
-
   <div class="resume-content img">
-    {{with  .Params.image }}
-    <a href="{{ . }}" target="_blank"><img src="{{ . }}"/></a>
+    {{ if .Params.image }}
+    <a
+      href="{{ .Params.image }}"
+      target="_blank"
+      aria-label="View larger image of {{ .Title }}"
+    >
+      <img
+        src="{{ .Params.image }}"
+        alt="{{ .Params.image_alt | default .Title }}"
+      />
+    </a>
     {{ end }}
   </div>
   <div class="resume-date ml-3">
-    <p>{{ .Description | safeHTML }}<p>
-    <p class><a href="{{.Permalink}}"><button type="button" class="btn btn-outline-secondary btn-sm">Read more<i class="fa fa-long-arrow-right ml-2" aria-hidden="true"></i></button></a></p>
+    <p>{{ .Description | safeHTML }}</p>
+    <p></p>
+    <p class>
+      <a
+        href="{{.Permalink}}"
+        class="btn btn-outline-secondary btn-sm"
+        aria-label="Read more about {{ .Title }}"
+      >
+        Read more about {{ .Title }}<i class="fa fa-long-arrow-right ml-2" aria-hidden="true"></i>
+      </a>
+    </p>
   </div>
 </div>
 <div>{{ partial "techtags" . }}</div>
