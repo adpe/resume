@@ -34,9 +34,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
     font-family: 'Saira Extra Condensed', serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -104,10 +102,6 @@ h2 {
     .list-icons {
         margin-left: -19px;
     }
-}
-
-.list-icons .list-inline-item i:hover {
-    color: var(--secondary-color);
 }
 
 .dropdown-item.active, .dropdown-item:active {
