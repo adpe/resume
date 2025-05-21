@@ -1,5 +1,5 @@
 <div class="resume-item d-flex flex-column flex-md-row mb-5">
-  <div class="publication-content mr-auto">
+  <div class="publication-content me-auto">
     <h3 class="mb-0">
       {{ .Params.pubtype }} -
       <a
@@ -11,7 +11,7 @@
     <div>{{ .Params.description | safeHTML }}</div>
     <p>{{ partial "techtags" . }}</p>
   </div>
-  <div class="resume-date text-md-right">
+  <div class="resume-date text-md-end ms-md-auto">
     <span class="text-primary"
       >{{ .Params.date | dateFormat "January 2006" }}</span
     >

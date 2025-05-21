@@ -3,14 +3,17 @@
     <h2 class="mb-5">Skills</h2>
     {{ .Content }}
     <div class="dropdown mb-4">
-      <button class="btn btn-outline-secondary dropdown-toggle px-4 py-2" type="button" id="skills-category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-outline-secondary dropdown-toggle px-4 py-2" type="button" id="skills-category-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
         <span id="skills-category-dropdown-label">{{ (index $.Site.Data.skills 0).grouping }}</span>
       </button>
-      <div class="dropdown-menu" aria-labelledby="skills-category-dropdown">
+      
+      <ul class="dropdown-menu" aria-labelledby="skills-category-dropdown">
         {{ range $i, $group := $.Site.Data.skills }}
-          <a class="dropdown-item{{ if eq $i 0 }} active{{ end }}" href="#" data-category="category-{{ $group.id }}">{{ $group.grouping }}</a>
+          <li>
+            <a class="dropdown-item{{ if eq $i 0 }} active{{ end }}" href="#" data-category="category-{{ $group.id }}">{{ $group.grouping }}</a>
+          </li>
         {{ end }}
-      </div>
+      </ul>
     </div>
     <div id="skills-category-lists">
       {{ range $i, $group := $.Site.Data.skills }}

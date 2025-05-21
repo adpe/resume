@@ -1,71 +1,61 @@
-(function($) {
-  "use strict"; // Start of use strict
-
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top)
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
+// Closes responsive menu when a scroll trigger link is clicked
+document.querySelectorAll('.js-scroll-trigger').forEach(link => {
+  link.addEventListener('click', () => {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarCollapse && typeof bootstrap !== "undefined") {
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      bsCollapse.hide();
     }
   });
+});
 
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
+// Enable Bootstrap 5 tooltips
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => {
+    new bootstrap.Tooltip(el);
   });
+});
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#sideNav'
+// Arrow opacity on scroll
+window.addEventListener('scroll', function() {
+  document.querySelectorAll(".arrow").forEach(arrow => {
+    arrow.style.opacity = 1 - window.scrollY / 875;
   });
+});
 
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+// Back to top functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollTopButton = document.getElementById("back-to-top");
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 800) {
+      scrollTopButton.style.visibility = "visible";
+      scrollTopButton.style.opacity = "1";
+    } else {
+      scrollTopButton.style.visibility = "hidden";
+      scrollTopButton.style.opacity = "0";
+    }
   });
+});
 
-  /* From https://codepen.io/bewley/pen/revRQv */
+// Skills category dropdown
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdown = document.getElementById('skills-category-dropdown');
+  const dropdownItems = document.querySelectorAll('.dropdown-item[data-category]');
+  const lists = document.querySelectorAll('.skills-category-list');
+  const label = document.getElementById('skills-category-dropdown-label');
 
-  $(window).scroll(function(){
-    $(".arrow").css("opacity", 1 - $(window).scrollTop() / 875);
-  });
-
-  // Back to top functionality.
-  document.addEventListener("DOMContentLoaded", function () {
-    const scrollTopButton = document.getElementById("back-to-top");
-
-    window.onscroll = function () {
-      if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-        scrollTopButton.style.visibility = "visible";
-        scrollTopButton.style.opacity = "1";
-      } else {
-        scrollTopButton.style.visibility = "hidden";
-        scrollTopButton.style.opacity = "0";
-      }
-    };
-  });
-
-  $(function() {
-    var $dropdown = $('#skills-category-dropdown');
-    var $dropdownItems = $('.dropdown-item[data-category]');
-    var $lists = $('.skills-category-list');
-    var $label = $('#skills-category-dropdown-label');
-
-    if ($dropdown.length && $dropdownItems.length && $lists.length && $label.length) {
-      $dropdownItems.on('click', function(e) {
+  if (dropdown && dropdownItems.length && lists.length && label) {
+    dropdownItems.forEach(item => {
+      item.addEventListener('click', function(e) {
         e.preventDefault();
-        $dropdownItems.removeClass('active');
-        $(this).addClass('active');
-        $lists.hide();
-        var selectedId = $(this).data('category');
-        $('#' + selectedId).show();
-        $label.text($(this).text());
+        dropdownItems.forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+        lists.forEach(list => list.style.display = 'none');
+        const selectedId = this.getAttribute('data-category');
+        const selectedList = document.getElementById(selectedId);
+        if (selectedList) selectedList.style.display = '';
+        label.textContent = this.textContent;
       });
-    }
-  });
-})(jQuery); // End of use strict
+    });
+  }
+});

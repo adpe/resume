@@ -2,8 +2,8 @@
   <div class="my-auto" id="experience-content">
     <h2 class="mb-5">Experience</h2>
     {{ range .Site.Data.experience }}
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
+        <div class="resume-item d-flex flex-column flex-md-row mb-5 w-100">
+          <div class="resume-content flex-grow-1">
             <h3 class="mb-0">{{ .role }}</h3>
             <div class="subheading mb-3">{{ .company }}</div>
             <p>{{ .major }}</p>
@@ -17,11 +17,10 @@
             <p>{{ .summaryend }}</p>
             <p class="font-italic small">{{ .notes }}</p>
           </div>
-          <div class="resume-date text-md-right">
+          <div class="resume-date text-md-end ms-md-auto">
             <span class="text-primary">{{ .range }}</span>
           </div>
         </div>
     {{ end }}
   </div>
-
 </section>
