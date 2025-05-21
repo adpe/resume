@@ -1,24 +1,23 @@
-.p-0{
+.p-0 {
   margin: 0 auto;
 }
 
-.devicons{
-  font-size:1.5em;
-      vertical-align: sub;
+.devicons {
+  font-size: 1.5em;
+  vertical-align: sub;
 }
 
 /* ensure items with short summarues push date over image */
-.publication-content{
-  width:90%;
+.publication-content {
+  width: 90%;
 }
 
-
-h3{
-    margin-top:40px;
+h3 {
+  margin-top: 40px;
 }
 
-h3.mb-0{
-    margin-top:0;
+h3.mb-0 {
+  margin-top: 0;
 }
 
 /* From https://codepen.io/wbeeftink/pen/dIaDH */
@@ -54,7 +53,7 @@ h3.mb-0{
   left: 7px;
   top: 0px;
   font-family: ForkAwesome;
-  content: "\f02b";
+  content: '\f02b';
   color: #9e9e9e;
 }
 
@@ -76,7 +75,7 @@ h3.mb-0{
 }
 
 .tag:hover::after {
-   border-left-color: var(--secondary-color);
+  border-left-color: var(--secondary-color);
 }
 
 .tag:hover::before {
