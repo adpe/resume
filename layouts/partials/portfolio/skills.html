@@ -2,33 +2,34 @@
   <div class="my-auto" id="skills-content">
     <h2 class="mb-5">Skills</h2>
     {{ .Content }}
-    <div class="row">
-      {{ range $.Site.Data.skills }}
-        <div class="col-xl-3 col-md-6">
-          <h3 class="mb-3 subheading skills-heading">{{ .grouping }}</h3>
-          <ul class="list-group" id="skills-list-{{ .id }}">
-            {{ range sort .skills "level" "desc" }}
-              <li class="list-inline-item">
-                <div class="skillbar" data-percent='{{ if isset . "level" }}{{ .level }}{{ else }}0%{{ end }}'>
-                  <div class="skillbar-title">
-                    <span class="list-inline-item">
-                      {{ if isset . "name" }}
-                        {{ if isset . "old" }}
-                          <i class="devicons devicons-{{ cond (in $.Site.Data.devicons (lower .name)) (lower .name) "terminal_badge" }}"></i>
-                        {{ else }}
-                          <i class="devicon-{{ lower .name }}-plain colored"></i>
-                        {{ end }}
-                        {{ .name }}
-                      {{ end }}
-                    </span>
-                  </div>
-                  <div class="skillbar-percent">{{ if isset . "level" }}{{ .level }}{{ else }}n/a{{ end }}</div>
-                  <div class="skillbar-bar"></div>
-                </div>
-              </li>
-            {{ end }}
-          </ul>
-        </div>
+    <div class="dropdown mb-4">
+      <button class="btn btn-outline-secondary dropdown-toggle px-4 py-2" type="button" id="skills-category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span id="skills-category-dropdown-label">{{ (index $.Site.Data.skills 0).grouping }}</span>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="skills-category-dropdown">
+        {{ range $i, $group := $.Site.Data.skills }}
+          <a class="dropdown-item{{ if eq $i 0 }} active{{ end }}" href="#" data-category="category-{{ $group.id }}">{{ $group.grouping }}</a>
+        {{ end }}
+      </div>
+    </div>
+    <div id="skills-category-lists">
+      {{ range $i, $group := $.Site.Data.skills }}
+        <ul class="list-group skills-category-list" id="category-{{ $group.id }}" style="{{ if ne $i 0 }}display:none;{{ end }}">
+          {{ range sort $group.skills "name" }}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>
+                <i class="devicon-{{ lower .name }}-plain colored"></i>
+                {{ .name }}
+                {{ with .link }}
+                  <a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="External link">
+                    <i class="fa fa-external-link"></i>
+                  </a>
+                {{ end }}
+              </span>
+              <span class="badge bg-light text-dark rounded-pill border">{{ .level }}</span>
+            </li>
+          {{ end }}
+        </ul>
       {{ end }}
     </div>
   </div>

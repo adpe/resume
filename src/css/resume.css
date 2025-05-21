@@ -110,6 +110,10 @@ h2 {
     color: var(--secondary-color);
 }
 
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--secondary-color);
+}
+
 #sideNav .navbar-nav .nav-item .nav-link {
     font-weight: 600;
     text-transform: uppercase;

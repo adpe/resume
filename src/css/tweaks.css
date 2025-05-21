@@ -26,42 +26,6 @@ div.skills-heading{
     margin-bottom:0 !important;
 }
 
-/* From https://codepen.io/robinselmer/pen/RarLQK */
-
-.skillbar {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin-bottom: 30px;
-}
-
-.skillbar-bar:before {
-  background: #eee;
-  content: "";
-  height: 3px;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-}
-
-.skillbar-bar {
-  height: 3px;
-  width: 0px;
-  background: var(--primary-color);
-}
-
-.skillbar-title {
-  display: inline-block;
-}
-
-.skillbar-percent {
-  float: right;
-  margin-top: 2px;
-  display: none;
-  font-size: 0.875em;
-  font-weight: 600;
-}
-
 /* From https://codepen.io/wbeeftink/pen/dIaDH */
 
 .tags {

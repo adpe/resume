@@ -29,17 +29,6 @@
     $('[data-toggle="tooltip"]').tooltip()
   });
 
-  /* From https://codepen.io/tamak/pen/hzEer */
-
-  $("[id^=skills-list]").hover(function() {
-      $(this).find('.skillbar').each(function () {
-          $(this).find('.skillbar-bar').animate({
-              width: $(this).attr('data-percent')
-          }, 3000);
-          $(this).find('.skillbar-percent').fadeIn(3000);
-      });
-  });
-
   /* From https://codepen.io/bewley/pen/revRQv */
 
   $(window).scroll(function(){
@@ -61,4 +50,22 @@
     };
   });
 
+  $(function() {
+    var $dropdown = $('#skills-category-dropdown');
+    var $dropdownItems = $('.dropdown-item[data-category]');
+    var $lists = $('.skills-category-list');
+    var $label = $('#skills-category-dropdown-label');
+
+    if ($dropdown.length && $dropdownItems.length && $lists.length && $label.length) {
+      $dropdownItems.on('click', function(e) {
+        e.preventDefault();
+        $dropdownItems.removeClass('active');
+        $(this).addClass('active');
+        $lists.hide();
+        var selectedId = $(this).data('category');
+        $('#' + selectedId).show();
+        $label.text($(this).text());
+      });
+    }
+  });
 })(jQuery); // End of use strict
