@@ -21,7 +21,7 @@
           {{ range sort $group.skills "name" }}
             <li class="list-group-item d-flex justify-content-between align-items-center">
               <span>
-                <i class="devicon-{{ lower .name }}-plain colored"></i>
+                <i class="devicon-{{ replace (replace (lower .name) " " "" ) "." "" }}-plain colored"></i>
                 {{ .name }}
                 {{ with .link }}
                   <a href="{{ . }}" target="_blank" rel="noopener noreferrer" title="External link">
