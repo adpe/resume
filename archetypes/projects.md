@@ -12,4 +12,5 @@ weight: 500
 sitemap:
   priority : 0.8
 ---
+
 This is the post body.

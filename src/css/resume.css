@@ -27,8 +27,8 @@ body {
 
 @media (min-width: 992px) {
   body {
-    padding-top: 0;
     padding-left: 17rem;
+    padding-top: 0;
   }
 }
 
@@ -36,10 +36,10 @@ h1,
 h2,
 h3,
 h4 {
+  color: #343a40;
   font-family: 'Saira Extra Condensed', serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40;
 }
 
 h1 {
@@ -52,41 +52,41 @@ h2 {
 }
 
 .subheading {
-  text-transform: uppercase;
-  font-weight: 500;
   font-family: 'Saira Extra Condensed', serif;
   font-size: 1.35rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.list-social-icons a {
+a .list-social-icons {
   color: #879099;
 }
 
-.list-social-icons .github a:hover {
+a:hover .list-social-icons .github {
   color: var(--primary-color);
 }
 
-.list-social-icons .linkedin a:hover {
+a:hover .list-social-icons .linkedin {
   color: #0077b5;
 }
 
-.list-social-icons .stack-overflow a:hover {
+a:hover .list-social-icons .stack-overflow {
   color: #f48024;
 }
 
-.list-social-icons .xing a:hover {
+a:hover .list-social-icons .xing {
   color: #007575;
 }
 
-.list-social-icons .telegram a:hover {
+a:hover .list-social-icons .telegram {
   color: #32afed;
 }
 
-.list-social-icons .signalapp a:hover {
+a:hover .list-social-icons .signalapp {
   color: #3872e8;
 }
 
-.list-social-icons .icomoon-findpenguins a:hover {
+a:hover .list-social-icons .icomoon-findpenguins {
   color: #3e88cb;
 }
 
@@ -122,14 +122,14 @@ h2 {
 
 @media (min-width: 992px) {
   #sideNav {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
-    width: 17rem;
     height: 100vh;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 17rem;
   }
 
   #sideNav .navbar-brand {
@@ -139,17 +139,17 @@ h2 {
   }
 
   #sideNav .navbar-brand .img-profile {
-    max-width: 14rem;
-    max-height: 14rem;
     border: 0.5rem solid rgba(255, 255, 255, 0.2);
+    max-height: 14rem;
+    max-width: 14rem;
   }
 
   #sideNav .navbar-collapse {
-    display: flex;
     align-items: flex-start;
+    display: flex;
     flex-grow: 0;
-    width: 100%;
     margin-bottom: auto;
+    width: 100%;
   }
 
   #sideNav .navbar-collapse .navbar-nav {
@@ -168,8 +168,8 @@ h2 {
 
 section.resume-section {
   border-bottom: 1px solid #dee2e6;
-  padding-top: 5rem !important;
   padding-bottom: 5rem !important;
+  padding-top: 5rem !important;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -188,8 +188,8 @@ section.resume-section .resume-item .resume-date {
 
 @media (min-width: 992px) {
   section.resume-section {
-    padding-top: 3rem !important;
     padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
   }
 }
 
@@ -205,8 +205,8 @@ section.resume-section .resume-item .resume-date {
 
 @media (max-width: 576px) {
   section.resume-section-sm {
-    text-align: center;
     padding-top: 2rem !important;
+    text-align: center;
   }
 
   h1 {
@@ -247,15 +247,15 @@ img {
 }
 
 .resume-content.img {
-  min-width: 300px;
   border-radius: 8px;
+  min-width: 300px;
   overflow: hidden;
 }
 
 .resume-content.img img {
+  border-radius: 8px;
   max-width: 100%;
   min-width: 100%;
-  border-radius: 8px;
   transition: all 0.5s;
 }
 
@@ -266,31 +266,31 @@ img {
 
 /* Back to top button */
 .back-to-top {
-  visibility: hidden;
-  position: fixed;
-  bottom: 60px;
-  right: 30px;
-  z-index: 99;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  color: var(--primary-color);
   background-color: #fff;
-  box-shadow: 0 0 3px 1px var(--primary-color);
   border-radius: 50%;
+  bottom: 60px;
+  box-shadow: 0 0 3px 1px var(--primary-color);
+  color: var(--primary-color);
+  display: flex;
+  height: 42px;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
   transition: visibility 0.5s, opacity 0.8s linear;
+  visibility: hidden;
+  width: 42px;
+  z-index: 99;
 }
 
 .back-to-top:hover,
 .back-to-top:focus {
-  color: var(--secondary-color);
   box-shadow: 0 0 3px 1px var(--secondary-color);
+  color: var(--secondary-color);
   outline: none;
 }
 
 .back-to-top svg {
-  width: 16px;
   height: 16px;
+  width: 16px;
 }

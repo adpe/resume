@@ -6,16 +6,16 @@ This is basically a single-page website with auto-scrolling based on left-hand n
 
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [hugo Resume](#hugo-resume)
-	- [Examples](#examples)
-	- [Setup & Use](#setup-use)
-		- [Summary](#summary)
-		- [Data files](#data-files)
-		- [Projects](#projects)
-		- [Publications](#publications)
-		- [Template params](#template-params)
-	- [Credits](#credits)
-		- [Start Bootstrap Resume](#start-bootstrap-resume)
+* [hugo Resume](#hugo-resume)
+  * [Examples](#examples)
+  * [Setup & Use](#setup-use)
+    * [Summary](#summary)
+    * [Data files](#data-files)
+    * [Projects](#projects)
+    * [Publications](#publications)
+    * [Template params](#template-params)
+  * [Credits](#credits)
+    * [Start Bootstrap Resume](#start-bootstrap-resume)
 
 <!-- /TOC -->
 
@@ -41,20 +41,24 @@ You can test the provided [exampleSite](exampleSite) after cloning with the comm
 `cd exampleSite;hugo -t hugo-resume --themesDir ../.. server`
 
 ### Summary
+
 Edit the main `contents/_index.md with a brief bio/summary`
 
 ### Data files
+
 Data files are used for simple content presented on the homepage.
 
-- [data/skills.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/skills.json)
-- [data/experience.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/experience.json)
-- [data/education.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/education.json)
+* [data/skills.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/skills.json)
+* [data/experience.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/experience.json)
+* [data/education.json](https://github.com/eddiewebb/hugo-resume/blob/master/exampleSite/data/education.json)
 
 ### Projects
+
 Initially projects were in their own JSON file too, but I decided I wanted to allow more detail and custom formatting.
 Projects are added to one of 2 subfolders of `creations` or `contributions`. The difference indicates your role as originator or colaborator.   Use `hugo add projects/TYPE/name-of-project.md` to leverage the proper archetype.
 
 ### Publications
+
 Similar to projects, creste them under `publications`. INclude any papers, speaking engagemnents, articles, etc.
 
 ### Template params
