@@ -43,6 +43,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Scroll-to-top behavior
   scrollTopButton.addEventListener('click', function(event) {
     event.preventDefault();
+
+    // Remove hash fragment from the URL without reloading
+    if (window.location.hash) {
+      history.replaceState(
+        null,
+        '',
+        window.location.pathname + window.location.search
+      );
+    }
+
     window.scrollTo({
       top: 0,
       behavior: 'smooth'

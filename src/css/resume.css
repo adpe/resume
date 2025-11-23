@@ -58,35 +58,35 @@ h2 {
   text-transform: uppercase;
 }
 
-a .list-social-icons {
+.list-social-icons a {
   color: #879099;
 }
 
-a:hover .list-social-icons .github {
+.list-social-icons .github a:hover {
   color: var(--primary-color);
 }
 
-a:hover .list-social-icons .linkedin {
+.list-social-icons .linkedin a:hover {
   color: #0077b5;
 }
 
-a:hover .list-social-icons .stack-overflow {
+.list-social-icons .stack-overflow a:hover {
   color: #f48024;
 }
 
-a:hover .list-social-icons .xing {
+.list-social-icons .xing a:hover {
   color: #007575;
 }
 
-a:hover .list-social-icons .telegram {
+.list-social-icons .telegram a:hover {
   color: #32afed;
 }
 
-a:hover .list-social-icons .signalapp {
+.list-social-icons .signalapp a:hover {
   color: #3872e8;
 }
 
-a:hover .list-social-icons .icomoon-findpenguins {
+.list-social-icons .icomoon-findpenguins a:hover {
   color: #3e88cb;
 }
 
