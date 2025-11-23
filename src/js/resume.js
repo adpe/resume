@@ -28,6 +28,8 @@ window.addEventListener('scroll', function() {
 // Back to top functionality
 document.addEventListener('DOMContentLoaded', function() {
   const scrollTopButton = document.getElementById('back-to-top');
+
+  // Show/hide logic
   window.addEventListener('scroll', function() {
     if (window.scrollY > 800) {
       scrollTopButton.style.visibility = 'visible';
@@ -36,6 +38,15 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollTopButton.style.visibility = 'hidden';
       scrollTopButton.style.opacity = '0';
     }
+  });
+
+  // Scroll-to-top behavior
+  scrollTopButton.addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
 });
 
