@@ -82,14 +82,6 @@ h3.mb-0 {
   color: white;
 }
 
-code {
-  background: #ededed;
-  border-radius: 15px;
-  color: var(--secondary-color);
-  margin: 0 5px;
-  padding: 5px 10px;
-}
-
 @media (max-width: 768px) {
   h1 {
     font-size: 5rem;
