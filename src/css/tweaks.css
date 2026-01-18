@@ -86,6 +86,16 @@ h3.mb-0 {
   h1 {
     font-size: 5rem;
   }
+
+  pre {
+    width: calc(100vw - 66px);
+  }
+
+  a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
   #sideNav .navbar-nav .nav-item .nav-link:not(.active):hover {
     transform: unset !important;
   }
